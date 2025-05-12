@@ -1,6 +1,6 @@
 function result = compute_damping_force(robot, target)
     K_DAMP = 0.8;
-    K4 = 1.2;
+    K4 = 10.0;%1.2,1.5,10.0
     R = 1.2;
 
     % 2D position and velocity

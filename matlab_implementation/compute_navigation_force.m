@@ -1,8 +1,8 @@
 function result = compute_navigation_force(robot, target, initial_pose_i)
     % Constants
     K1 = 0.9;
-    K2 = 1.5;
-    K3 = 1.0;
+    K2 = 0.5;
+    K3 = 0.5;
     c1 = 0.8;
     c2 = 0.5;
 

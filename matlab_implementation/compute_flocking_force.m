@@ -1,13 +1,13 @@
 function f_alpha = compute_flocking_force(robot, neighbors)
     % Constants
     EPSILON = 0.1;
-    D = 1.0;
+    D = 2.0;
     KC = 1.2;
     R = KC * D;
     R_SIGMA = (1 / EPSILON) * (sqrt(1 + EPSILON * (R^2)) - 1);
     H = 0.2;
-    a = 5.0;
-    b = 5.0;
+    a = 10.0;
+    b = 10.0;
     c = abs(a - b) / sqrt(4 * a * b);
     d_alpha = (1 / EPSILON) * (sqrt(1 + EPSILON * (D^2)) - 1);
 

@@ -2,10 +2,10 @@ close all;
 clear; clc;
 
 % Parameters
-num_agents = 5;
+num_agents = 10;
 dt = 0.01;      % timestep (20 Hz)
 steps = 1000;   
-is_informed = [true, false, false, true, false];
+is_informed = [true, true, true, true, true,true, true, true, true, true];
 
 % Initializations
 robots = repmat(struct('pose', zeros(2,1), 'vel', zeros(2,1)), num_agents, 1);
@@ -13,7 +13,7 @@ for i = 1:num_agents
     robots(i).pose = [(i - 1) * 2; 0];  % x = 0, 2, 4, 6, 8; y = 0
 end
 
-target.pose = [5; 5];
+target.pose = [10; 10];
 target.vel = [0; 0];
 initial_poses = zeros(2, num_agents);
 
@@ -23,7 +23,7 @@ trajectory = zeros(2, steps, num_agents);
 % Create figure and hold
 figure;
 axis equal; grid on;
-xlim([-1, 10]); ylim([-1, 10]);
+xlim([-1, 20]); ylim([-1, 20]);
 hold on;
 
 % Initialize plot handles
